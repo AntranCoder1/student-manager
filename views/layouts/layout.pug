@@ -9,7 +9,8 @@ html(lang="en")
         link(rel="stylesheet", href="../../styles/custom.css")
     body 
         nav.navbar.navbar-expand-lg.navbar-light.bg-light
-            a.navbar-brand.ml-5.logo(href='../') Coders.Tokyo
+            img.ml-5(src='../../images/logo.png', width="50", height="50", alt='Logo')
+            a.navbar-brand.logo(href='../') Coders.Tokyo
             button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
                 span.navbar-toggler-icon
             #navbarNav.collapse.navbar-collapse
@@ -17,6 +18,8 @@ html(lang="en")
                     li.nav-item.active
                         a.nav-link(href='../') Home
                     li.nav-item
-                a.nav-link(href='../users') Users
-        .container.mt-2
+                        a.nav-link(href='../users') Users
+                    li.nav-item 
+                        a.nav-link(href='../auth/login') Login
+        .container.mt-3
             block content
