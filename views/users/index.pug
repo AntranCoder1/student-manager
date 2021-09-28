@@ -1,14 +1,13 @@
 extends ../layouts/layout.pug
 
 block content
-    h1 Users 
-    a(href='/users/create') new
+    h1.user_list Users 
 
-    form(action="/users/search", method="GET")
+    form.users_search(action="/users/search", method="GET")
         input(type="text", name="q", placeholder="name")
         button Search
 
-    ul 
+    ul.users_data_search 
         each user in users 
             span= user.name 
             span &nbsp;
