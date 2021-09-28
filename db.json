@@ -1,21 +1,18 @@
 {
   "users": [
     {
-      "name": "Trần Thành An",
-      "phone": "123",
-      "id": "TempVdkWcMWwmek1tYXhz",
+      "id": "K7NGwPDTFS6g1X-j8Uie9",
+      "username": "tom@gmail.com",
+      "password": "5caf72868c94f184650f43413092e82c",
+      "name": "tom",
+      "phone": "456"
+    },
+    {
+      "id": "3rfggb0Gqn9CY3tlE3WNV",
       "username": "antran@gmail.com",
-      "password": "123456"
-    },
-    {
-      "name": "Tom",
-      "phone": "456",
-      "id": "y1UjbCGNV9bFv-7Q8k-51"
-    },
-    {
-      "name": "hue",
-      "phone": "789",
-      "id": "gM9x9-WPwxaIsDGvDm7Vh"
+      "password": "42050e34e1a0f6bd5f65196022751667",
+      "name": "Tran Thanh An",
+      "phone": "123"
     }
   ]
 }

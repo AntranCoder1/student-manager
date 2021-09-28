@@ -1,7 +1,7 @@
 extends ../layouts/layout.pug
 
 block content
-    h1.mt-3.mb-3 Sign In
+    h1.mt-3 Sign Up
 
     if  errors 
         each error in errors
@@ -15,9 +15,15 @@ block content
         .form-group 
             label(for="password") password 
             input#password.form-control(type="text", name="password", placeholder="password", value=values ? values.password : "") 
+
+        .form-group 
+            label(for="name") Name 
+            input#name.form-control(type="text", name="name", placeholder="name", value=values ? values.name : "")
+
+        .form-group 
+            label(for="phone") Phone
+            input#phone.form-control(type="text", name="phone", placeholder="phone", value=values ? values.phone : "")  
             
-        button.btn.btn-primary Login
+        button.btn.btn-primary Register
+
         
-        p.mt-3 
-            | Bạn chưa có tài khoản &#8594; 
-            a(href='/auth/res', style='text-decoration: none') Đăng Ký
