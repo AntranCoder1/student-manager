@@ -1,0 +1,22 @@
+{
+  "name": "student-management",
+  "version": "1.0.0",
+  "description": "'làm quen với nodejs'",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tran Thanh An",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0",
+    "nanoid": "^3.1.28",
+    "pug": "^3.0.2",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
