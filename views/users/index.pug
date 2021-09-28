@@ -1,12 +1,15 @@
-h1 Users 
-a(href='/users/create') new
+extends ../layouts/layout.pug
 
-form(action="/users/search", method="GET")
-    input(type="text", name="q", placeholder="name")
-    button Search
+block content
+    h1 Users 
+    a(href='/users/create') new
 
-ul 
-    each user in users 
-        span= user.name 
-        span &nbsp;
-        a(href="/users/" + user.id) View
+    form(action="/users/search", method="GET")
+        input(type="text", name="q", placeholder="name")
+        button Search
+
+    ul 
+        each user in users 
+            span= user.name 
+            span &nbsp;
+            a(href="/users/" + user.id) View
