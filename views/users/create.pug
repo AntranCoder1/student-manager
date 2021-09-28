@@ -1,8 +1,15 @@
 extends ../layouts/layout.pug
 
 block content
-    h1.user_list Create Users 
+    h1 Create Users 
 
-    form.users_search(action="/users/create", method="post")
-        input(type="text", name="name", placeholder="name")
-        button Create
+    form(action="/users/create", method="post")
+        .form-group
+            label(for="name") Name 
+            input#name.form-control(type="text", name="name", placeholder="name") 
+
+        .form-group 
+            label(for="phone") Phone 
+            input#phone.form-control(type="text", name="phone", placeholder="phone") 
+            
+        button.btn.btn-primary Create

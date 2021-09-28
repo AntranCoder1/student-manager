@@ -4,25 +4,19 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title STUDENT MANAGER
-        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
-        link(href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css', rel='stylesheet')
+        title NODEJS WEB SERVER USING EXPRESS 2018
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
         link(rel="stylesheet", href="../../styles/custom.css")
-    body
-        block navBar
-            header#header.l-header
-                nav.nav.bd-grid
-                    #nav-toggle.nav_toggle
-                        i.bx.bxs-grid
-                    a.nav_logo(href='../')
-                        img.logo(src='../../images/logo.png', width='50', height='50', alt='logo')
-                    #nav-menu.nav_menu
-                        ul.nav_list
-                            li.nav_item
-                                a.nav_link.active(href='../') Home
-                            li.nav_item
-                                a.nav_link(href='../users') Users List
-                            li.nav_item
-                                a.nav_link(href='../users/create') New Users
-        block content
-            
+    body 
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand.ml-5.logo(href='../') Coders.Tokyo
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse
+                ul.navbar-nav.ml-5.nav_link
+                    li.nav-item.active
+                        a.nav-link(href='../') Home
+                    li.nav-item
+                a.nav-link(href='../users') Users
+        .container.mt-2
+            block content

@@ -1,14 +1,24 @@
 extends ../layouts/layout.pug
 
 block content
-    h1.user_list Users 
+    h1
+        span.mr-3 Users 
+        a.btn.btn-primary(href='/users/create') New
 
-    form.users_search(action="/users/search", method="GET")
-        input(type="text", name="q", placeholder="name")
-        button Search
+    .d-flex.align-items-center
+        form.ml-auto.mb-3(action="/users/search", method="GET", class="d-flex")
+            input(type="text", name="q", placeholder="name", class="form-control")
+            button.btn.btn-primary.ml-2 Search
 
-    ul.users_data_search 
+    table.table 
+        tr 
+            th Name 
+            th Phone
+            th Actions 
+
         each user in users 
-            span= user.name 
-            span &nbsp;
-            a(href="/users/" + user.id) View
+            tr 
+                td= user.name
+                td= user.phone
+                td 
+                    a.btn.btn-light(href='/users/' + user.id) view
