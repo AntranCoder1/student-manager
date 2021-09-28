@@ -7,6 +7,8 @@ const cookieParser = require('cookie-parser');
 const usersRouter = require('./routers/users.router');
 const authRouter = require('./routers/auth.router');
 
+const authValidate = require('./middleware/auth.middleware');
+
 app.set('view engine', 'pug');
 app.set('views', './views');
 
@@ -21,7 +23,7 @@ app.get('/', (request, response) => {
     })
 })
 
-app.use('/users', usersRouter);
+app.use('/users', authValidate.requireAuth, usersRouter);
 app.use('/auth', authRouter);
 
 app.listen(port, () => {

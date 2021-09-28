@@ -38,7 +38,7 @@ router.post('/login', (request, response) => {
         return;
     }
 
-    response.cookie('userId', user.id, {
+    response.cookie('UsersId', user.id, {
         signed: true
     });
 
